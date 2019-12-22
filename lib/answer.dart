@@ -9,13 +9,18 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      child: RaisedButton(
-        color: Colors.blue,
-        textColor: Colors.white,
-        child: Text(answerText),
-        onPressed: selectHandler,
-      ),
-    );
+        width: double.infinity,
+        child: RaisedButton(
+          color: Colors.orange,
+          textColor: Colors.white,
+          child: Text(
+            answerText,
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          onPressed: selectHandler,
+        ));
   }
 }

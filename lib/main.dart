@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
   }
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   final _questions = const [
     {
       'questionText': 'What\'s your favorite color?',
@@ -76,6 +76,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(        
+        primarySwatch: Colors.orange,
+        accentColor: Colors.orange,
+         brightness: Brightness.dark,
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('My First App'),
